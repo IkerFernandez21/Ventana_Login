@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 /*
 *   @author IkerFernandez21
-*
+*   Prueba en clase de una ventana de login
  */
 public class MainActivity extends AppCompatActivity {
 
