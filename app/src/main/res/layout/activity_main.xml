@@ -4,10 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
 
-   <com.google.android.material.textfield.TextInputLayout
+        android:text="Hola , estoy por encima de todas las capas"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:src="@drawable/girl"
+        >
+
+    </ImageView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:src="@drawable/ic_power">
+
+    </ImageView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@drawable/gradient"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="63dp">
+
+    </View>
+
+    <com.google.android.material.textfield.TextInputLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        app:layout_constraintBottom_toBottomOf="@id/guideline3"
@@ -16,12 +56,14 @@
        android:id="@+id/til2"
        android:layout_marginLeft="100dp"
        android:layout_marginRight="100dp"
-       android:hint="Usuario">
+       android:hint="Usuario"
+       >
 
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:backgroundTint="@color/amarillo">
+           android:backgroundTint="@color/azultransparente"
+           tools:ignore="SpeakableTextPresentCheck">
            //cambia color
 
        </EditText>
@@ -37,12 +79,15 @@
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginTop="5dp"
-        android:hint="Contraseña">
+        android:hint="Contraseña"
+        >
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/azultransparente"
             android:inputType="textPassword"
-            android:backgroundTint="@color/amarillo">
+            tools:ignore="SpeakableTextPresentCheck">
 
         </EditText>
 
@@ -67,7 +112,8 @@
         android:layout_marginRight="100dp"
         android:layout_marginTop="5dp"
         android:textColor="@color/red"
-        android:backgroundTint="@color/azul">
+        android:backgroundTint="@color/azultransparente"
+        android:alpha="0.6">
 
 
     </Button>
