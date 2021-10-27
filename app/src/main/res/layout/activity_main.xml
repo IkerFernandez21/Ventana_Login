@@ -4,39 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/gradient">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-
-        android:text="Hola , estoy por encima de todas las capas"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/girl"
-        >
+        android:src="@drawable/girl">
 
     </ImageView>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
 
-        android:src="@drawable/ic_power">
-
-    </ImageView>
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,47 +26,60 @@
 
     </View>
 
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="124dp"
+        android:alpha="0.7"
+        android:src="@drawable/ic_power"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
     <com.google.android.material.textfield.TextInputLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:layout_constraintBottom_toBottomOf="@id/guideline3"
-       android:layout_marginBottom="5dp"
-       app:layout_constraintStart_toStartOf="parent"
-       android:id="@+id/til2"
-       android:layout_marginLeft="100dp"
-       android:layout_marginRight="100dp"
-       android:hint="Usuario"
-       >
-
-       <EditText
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:backgroundTint="@color/azultransparente"
-           tools:ignore="SpeakableTextPresentCheck">
-           //cambia color
-
-       </EditText>
-
-
-   </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/guideline3"
-        app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/til1"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Usuario"
+        app:layout_constraintBottom_toBottomOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/azultransparente"
+            tools:ignore="SpeakableTextPresentCheck"
+            >
+            //cambia color
+
+        </EditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
         android:hint="Contraseña"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/azultransparente"
             android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck">
+            tools:ignore="SpeakableTextPresentCheck"
+            >
 
         </EditText>
 
@@ -101,22 +93,35 @@
         app:layout_constraintGuide_begin="329dp" />
 
     <Button
-        android:id="@+id/boton"
+        android:id="@+id/boton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
+        android:alpha="0.9"
+        style="@style/buttoncorner"
+        android:backgroundTint="@color/button_custom"
+        android:text="LOGIN"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til1"
-        app:layout_constraintWidth="match_parent"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/red"
-        android:backgroundTint="@color/azultransparente"
-        android:alpha="0.6">
+        app:layout_constraintWidth="match_parent">
 
 
     </Button>
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/buttoninverse"
+
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="440dp"
+        android:text="REGISTRARSE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
