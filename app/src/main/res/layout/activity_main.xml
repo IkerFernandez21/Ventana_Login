@@ -27,13 +27,14 @@
     </View>
 
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="124dp"
+        android:layout_width="81dp"
+        android:layout_height="87dp"
+
+        android:layout_marginTop="160dp"
         android:alpha="0.7"
         android:src="@drawable/ic_power"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
@@ -78,8 +79,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/azultransparente"
             android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck"
-            >
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
         </EditText>
 
@@ -103,7 +103,7 @@
         style="@style/buttoncorner"
         android:backgroundTint="@color/button_custom"
         android:text="LOGIN"
-        android:textColor="@color/black"
+        android:textColor="@color/red"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til1"
         app:layout_constraintWidth="match_parent">
@@ -120,6 +120,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="440dp"
         android:text="REGISTRARSE"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
