@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainSplash extends AppCompatActivity {
 
@@ -23,10 +24,12 @@ public class MainSplash extends AppCompatActivity {
         decoracion.setSystemUiVisibility(uiOptions);
         ImageView img =(ImageView) findViewById(R.id.imageView3);
         ImageView img2= (ImageView) findViewById(R.id.imageView4);
+        TextView tx1 = (TextView) findViewById(R.id.textView);
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.fadein);
         Animation myanim2 = AnimationUtils.loadAnimation(this,R.anim.logoanim);
         img.startAnimation(myanim);
         img2.startAnimation(myanim2);
+        tx1.startAnimation(myanim2);
 
 
         openApp(true);
@@ -39,7 +42,7 @@ public class MainSplash extends AppCompatActivity {
                 Intent intent1 = new Intent(MainSplash.this, MainActivity.class);
                 startActivity(intent1);
             }
-        },2000);
+        },4000);
     }
 
 }

@@ -103,7 +103,7 @@
         style="@style/buttoncorner"
         android:backgroundTint="@color/button_custom"
         android:text="LOGIN"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til1"
         app:layout_constraintWidth="match_parent">
