@@ -16,8 +16,8 @@
     <rotate
 
     android:duration="5000"
-    android:fromDegrees="0"
-        android:toDegrees="30" >
+    android:fromDegrees="10"
+        android:toDegrees="40" >
 
 
     </rotate>
