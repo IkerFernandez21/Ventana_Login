@@ -1,11 +1,13 @@
 package com.iker.prueba3;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.NotificationCompat;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.ContextMenu;
@@ -13,18 +15,20 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainFotoAleatoria extends AppCompatActivity {
-
+    private ImageView imagen1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_foto_aleatoria);
         TextView tv1 = findViewById(R.id.tvtab);
+        imagen1=findViewById(R.id.imageView);
         registerForContextMenu(tv1);
     }
 
@@ -92,9 +96,24 @@ public class MainFotoAleatoria extends AppCompatActivity {
             return true;
         }
         if (id == R.id.camera) {
-            Toast toast = Toast.makeText(this,"going APPBAR CAMERA",Toast.LENGTH_LONG );
+            Toast toast = Toast.makeText(this,"Abriendo la camara",Toast.LENGTH_LONG );
             toast.show();
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+            startActivity(intent);
+
+
+
         }
         return super.onOptionsItemSelected(item);
     }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imgBitmap = (Bitmap) extras.get("data");
+            imagen1.setImageBitmap(imgBitmap);
+        }
+    }
+
 }
