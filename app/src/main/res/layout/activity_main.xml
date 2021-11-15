@@ -124,5 +124,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button4"
+        style="@style/buttoninverse"
+
+        android:layout_width="141dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="556dp"
+        android:text="FOTO ALEATORIA"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
