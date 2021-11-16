@@ -4,6 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.rcl.appuem.MainActivity">
+
+    <item
+        android:id="@+id/lupaa"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_search"
+        android:title="item2"
+        app:showAsAction="always" />
     <item
     android:id="@+id/camera"
     android:icon="@drawable/ic_baseline_camera"
@@ -15,4 +22,6 @@
         android:orderInCategory="100"
         android:title="Configuracion"
         app:showAsAction="never" />
+
+
 </menu>

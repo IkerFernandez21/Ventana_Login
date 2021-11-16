@@ -31,19 +31,19 @@ public class MainActivity extends AppCompatActivity {
         botonregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivityRegistrar.class);
+                Intent intent1 = new Intent(MainActivity.this, MainActivityRegistrar.class);
 
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
+                //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent1);
             }
         });
         botonfoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainFotoAleatoria.class);
+                Intent intent2 = new Intent(MainActivity.this, MainFotoAleatoria.class);
 
-                startActivity(intent);
+                startActivity(intent2);
             }
         });
 

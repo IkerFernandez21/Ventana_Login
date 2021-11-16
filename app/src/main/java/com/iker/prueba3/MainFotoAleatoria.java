@@ -1,13 +1,19 @@
 package com.iker.prueba3;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.NotificationCompat;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.ContextMenu;
@@ -23,6 +29,9 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainFotoAleatoria extends AppCompatActivity {
     private ImageView imagen1;
+    ActivityResultLauncher<String> ar;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +39,10 @@ public class MainFotoAleatoria extends AppCompatActivity {
         TextView tv1 = findViewById(R.id.tvtab);
         imagen1=findViewById(R.id.imageView);
         registerForContextMenu(tv1);
+
+
+
+
     }
 
     @Override
@@ -89,6 +102,7 @@ public class MainFotoAleatoria extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
+
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
@@ -98,21 +112,23 @@ public class MainFotoAleatoria extends AppCompatActivity {
         if (id == R.id.camera) {
             Toast toast = Toast.makeText(this,"Abriendo la camara",Toast.LENGTH_LONG );
             toast.show();
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-            startActivity(intent);
+            Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(capturaFoto,0);
+
 
 
 
         }
         return super.onOptionsItemSelected(item);
     }
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1 && resultCode == RESULT_OK) {
+        if (requestCode == requestCode && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imgBitmap = (Bitmap) extras.get("data");
-            imagen1.setImageBitmap(imgBitmap);
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imagen1.setImageBitmap(imageBitmap);
         }
     }
 
