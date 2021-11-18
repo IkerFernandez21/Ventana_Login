@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.NotificationCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,6 +22,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,19 +34,40 @@ public class MainFotoAleatoria extends AppCompatActivity {
     private ImageView imagen1;
     ActivityResultLauncher<String> ar;
     static final int REQUEST_IMAGE_CAPTURE = 1;
-
+    private SwipeRefreshLayout swipeLayout;
+    private WebView wv1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_foto_aleatoria);
         TextView tv1 = findViewById(R.id.tvtab);
-        imagen1=findViewById(R.id.imageView);
+        wv1 = findViewById(R.id.webvi);
+        //imagen1=findViewById(R.id.imageView);
+        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
         registerForContextMenu(tv1);
+        wv1.getSettings().setBuiltInZoomControls(true);
+        WebSettings ws = wv1.getSettings();
+        ws.setJavaScriptEnabled(true);
 
+
+        wv1.loadUrl("https://thispersondoesnotexist.com/");
 
 
 
     }
+
+    protected SwipeRefreshLayout.OnRefreshListener
+                mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            /*Toast toast0 = Toast.makeText(MainFotoAleatoria.this,"Hola , es un texto de ejemplo al hacer swipe",Toast.LENGTH_LONG);
+            toast0.show();*/
+            wv1.reload();
+            swipeLayout.setRefreshing(false);
+        }
+    };
+
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -113,9 +137,9 @@ public class MainFotoAleatoria extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Abriendo la camara",Toast.LENGTH_LONG );
             toast.show();
 
-            Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            /*Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(capturaFoto,0);
-
+            */
 
 
 
@@ -128,7 +152,7 @@ public class MainFotoAleatoria extends AppCompatActivity {
         if (requestCode == requestCode && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imagen1.setImageBitmap(imageBitmap);
+            //imagen1.setImageBitmap(imageBitmap);
         }
     }
 

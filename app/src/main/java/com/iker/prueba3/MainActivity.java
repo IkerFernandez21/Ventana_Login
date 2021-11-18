@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent1 = new Intent(MainActivity.this, MainActivityRegistrar.class);
 
-                //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent1);
             }
         });

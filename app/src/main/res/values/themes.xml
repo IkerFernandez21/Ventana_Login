@@ -19,4 +19,10 @@
 
 
     </style>
+    <style name="ThemeTransparente" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:statusBarColor">@color/tranparente</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+
+    </style>
 </resources>

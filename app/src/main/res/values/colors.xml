@@ -12,5 +12,5 @@
     <color name="azul">#2F33F4</color>
     <color name="azultransparente">#772F33F4</color>
     <color name="morado">#B21CF3</color>
-
+    <color name="tranparente">#00B21CF3</color>
 </resources>
