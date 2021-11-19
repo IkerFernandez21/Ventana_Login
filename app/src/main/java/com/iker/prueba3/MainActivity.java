@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button botonregistrar = findViewById(R.id.button3);
         Button botonlogin = findViewById(R.id.boton1);
+        Button botonfoto = findViewById(R.id.button4);
         botonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
         botonregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivityRegistrar.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
+                Intent intent1 = new Intent(MainActivity.this, MainActivityRegistrar.class);
+
+
+                startActivity(intent1);
+            }
+        });
+        botonfoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(MainActivity.this, MainFotoAleatoria.class);
+
+                startActivity(intent2);
             }
         });
 
