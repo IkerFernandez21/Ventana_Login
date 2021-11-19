@@ -32,6 +32,7 @@ public class MainSplash extends AppCompatActivity {
         tx1.startAnimation(myanim2);
 
 
+
         openApp(true);
     }
 
