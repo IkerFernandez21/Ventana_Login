@@ -1,11 +1,14 @@
 package com.iker.prueba3;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toolbar;
 
 public class MainActivityRegistrar extends AppCompatActivity {
 
@@ -14,21 +17,22 @@ public class MainActivityRegistrar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_registrar);
 
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                Intent intent1 = new Intent(MainActivityRegistrar.this, MainActivity.class);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
-       // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+                startActivity(intent1);
+            }
+        };
+
+
+
 
     }
 
-    public boolean onOptionsItemSelected(MenuItem item){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        return true;
-    }
 
 
 }
