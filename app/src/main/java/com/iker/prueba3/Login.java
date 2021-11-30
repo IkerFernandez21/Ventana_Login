@@ -5,20 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.widget.Button;
 
 /*
 *   @author IkerFernandez21
 *   Prueba en clase de una ventana de login
  */
-public class MainActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         Button botonregistrar = findViewById(R.id.button3);
         Button botonlogin = findViewById(R.id.boton1);
         Button botonfoto = findViewById(R.id.button4);
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         botonregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(MainActivity.this, MainActivityRegistrar.class);
+                Intent intent1 = new Intent(Login.this, Registrar.class);
 
 
                 startActivity(intent1);
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         botonfoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(MainActivity.this, MainFotoAleatoria.class);
+                Intent intent2 = new Intent(Login.this, FotoAleatoria.class);
 
                 startActivity(intent2);
             }

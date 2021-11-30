@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityRegistrar"
+    tools:context=".Registrar"
     >
-
 
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/hipman"
+        android:alpha="0.7"
         android:scaleType="fitStart"
-        tools:ignore="MissingConstraints"
-        android:alpha="0.7"/>
+        android:src="@drawable/hipman"
+        android:scaleX="1.1"
+        android:scaleY="1.1"/>
 
     <View
         android:id="@+id/view"
@@ -34,11 +34,13 @@
         android:layout_width="252dp"
         android:layout_height="75dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="404dp"
         android:backgroundTint="@color/azultransparente"
         android:hint="Correo electronico:"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
 
@@ -49,10 +51,12 @@
         android:layout_width="254dp"
         android:layout_height="78dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="240dp"
         android:backgroundTint="@color/azultransparente"
         android:hint="Usuario"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/view"
         tools:ignore="SpeakableTextPresentCheck">
 
@@ -64,13 +68,15 @@
         android:layout_width="252dp"
         android:layout_height="69dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="328dp"
         android:backgroundTint="@color/azultransparente"
         android:hint="Contraseña:"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
 
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
 
 
@@ -81,25 +87,34 @@
         style="@style/buttoncorner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="416dp"
+
+
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="@color/button_custom"
         android:text="REGISTRAR"
-        android:textColor="@color/red"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toTopOf="@id/editText2" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="84dp"
         android:layout_height="79dp"
-        android:layout_marginTop="84dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_power" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
