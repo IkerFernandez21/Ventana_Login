@@ -1,25 +1,15 @@
 package com.iker.prueba3;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.NotificationCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.ContextMenu;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -30,16 +20,17 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class MainFotoAleatoria extends AppCompatActivity {
+public class FotoAleatoria extends AppCompatActivity {
     private ImageView imagen1;
     ActivityResultLauncher<String> ar;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private SwipeRefreshLayout swipeLayout;
+    int x;
     private WebView wv1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_foto_aleatoria);
+        setContentView(R.layout.activity_foto_aleatoria);
         TextView tv1 = findViewById(R.id.tvtab);
         wv1 = findViewById(R.id.webvi);
         //imagen1=findViewById(R.id.imageView);
@@ -49,6 +40,7 @@ public class MainFotoAleatoria extends AppCompatActivity {
         wv1.getSettings().setBuiltInZoomControls(true);
         WebSettings ws = wv1.getSettings();
         ws.setJavaScriptEnabled(true);
+
 
 
         wv1.loadUrl("https://thispersondoesnotexist.com/");
