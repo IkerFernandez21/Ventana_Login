@@ -34,7 +34,7 @@ otra foto aleatoria.
 Tambien esta ventana dispone de un menu contextual que al mantener pulsado un texto, se despliega el menu 
 con sus distintas opciones
 
-![GiftMenuContextual]()
+![GiftMenuContextual](./Documentacion/VentanaFoto.gif)
 
 Tambien tenemos otro tipo de menu situado en la actionbar, en la cual tenemos el clasico boton de opciones junto 
 con un boton de lupa (Busqueda) y otro de una camara.
