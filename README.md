@@ -45,7 +45,7 @@ con un boton de lupa (Busqueda) y otro de una camara.
 que al pulsar ese boton, se abre la aplicacion nativa de la camara de fotos de tu dispositivo movil y te permitira
 hacer una foto y seleccionarla.
 
-![GiftCamara]()
+![GiftCamara](./Documentacion/BotonCamara.gif)
 
 Para realizarlo , tenemos que darle, a nuestra aplicacion , permiso del dispositivo para abrir la camara.
 Esto se realiza añadiendo en el archivo Manifest la siguiente linea:
