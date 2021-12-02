@@ -129,9 +129,9 @@ public class FotoAleatoria extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Abriendo la camara",Toast.LENGTH_LONG );
             toast.show();
 
-            /*Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(capturaFoto,0);
-            */
+            Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivity(capturaFoto);
+            
 
 
 
