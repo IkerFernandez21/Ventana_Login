@@ -65,6 +65,3 @@ realiza insertando en el evento de nuestro boton , el siguiente codigo
 Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 startActivity(capturaFoto);
 ~~~
-
-  
-
