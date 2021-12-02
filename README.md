@@ -8,7 +8,7 @@ de registro y una ventana que visualiza de una web fotos de personas que no exis
 * La ventana de splash no es mas que una animacion de un fondo rotando y de el logo parpadeando dando la sensacion
 al usuario de que se esta abriendo la aplicacion y de que esta cargando.
 
-![GiftSplash](./Documentacion/)
+![GiftSplash](./Documentacion/GiftSplash.mp4)
 
 ## Ventana Login
 
