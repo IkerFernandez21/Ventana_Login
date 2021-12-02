@@ -8,6 +8,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -129,9 +130,9 @@ public class FotoAleatoria extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Abriendo la camara",Toast.LENGTH_LONG );
             toast.show();
 
-            /*Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(capturaFoto,0);
-            */
+            Intent capturaFoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivity(capturaFoto);
+
 
 
 
