@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.iker.prueba3">
+    package="com.iker.prueba3" >
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-feature android:name="android.hardware.camera"
+
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="POWERAPP"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Prueba3">
-
+        android:theme="@style/Theme.Prueba3" >
+        <activity
+            android:name=".MainBab"
+            android:exported="true" />
         <activity
             android:name=".FotoAleatoria"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight">
-
+            android:theme="@style/Theme.AppCompat.DayNight" >
         </activity>
         <activity
             android:name=".Splash"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:theme="@style/Theme.Design.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,24 +37,16 @@
         </activity>
         <activity
             android:name=".Registrar"
-            android:exported="true"
             android:allowBackup="true"
-            android:parentActivityName="com.iker.prueba3.Login"
-            android:theme="@style/AppTheme.ActionBar.Transparent"
-            >
-
-
+            android:exported="true"
+            android:parentActivityName=".Login"
+            android:theme="@style/AppTheme.ActionBar.Transparent" >
         </activity>
         <activity
             android:name=".Login"
             android:exported="true"
-            android:theme="@style/AppTheme.ActionBar.Transparent">
-
+            android:theme="@style/AppTheme.ActionBar.Transparent" >
         </activity>
-
-
-
-
     </application>
 
 </manifest>
