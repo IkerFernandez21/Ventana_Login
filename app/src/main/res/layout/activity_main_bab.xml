@@ -6,5 +6,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainBab">
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/botton_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:navigationIcon="@drawable/ic_menu2"
+        app:menu="@menu/bottom_appbar_menu"
+
+        >
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:backgroundTint="@color/amarillo"
+        android:src="@drawable/ic_suma_foreground"
+        android:tint="@color/white"
+
+        app:fabSize="normal"
+        app:maxImageSize="80dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
